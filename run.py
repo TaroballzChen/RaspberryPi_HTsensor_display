@@ -19,13 +19,12 @@ def send_data():
         dlg.HumidityValue.display(str(hum))
         dlg.TemperatureValue.display(str(tem))
         nowTime = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-        table = dlg.tableWidget
-        currentRowCount = table.rowCount()
-        table.insertRow(table.rowCount())
-        table.setItem(table,currentRowCount, 0, nowTime)
-        table.setItem(table,currentRowCount, 1, tem)
-        table.setItem(table,currentRowCount, 2, hum)
-        table.setItem(table,currentRowCount, 3, "OK")
+        currentRowCount = dlg.tableWidget.rowCount()
+        dlg.tableWidget.insertRow(dlg.tableWidget.rowCount())
+        dlg.tableWidget.setItem(currentRowCount,0, 0, nowTime)
+        dlg.tableWidget.setItem(currentRowCount,1,1, tem)
+        dlg.tableWidget.setItem(currentRowCount, 2,2, hum)
+        dlg.tableWidget.setItem(currentRowCount, 3,3, "OK")
 
 
 
