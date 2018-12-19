@@ -20,7 +20,7 @@ def send_data():
         dlg.TemperatureValue.display(str(tem))
         nowTime = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
         table = dlg.tableWidget
-        table.insertRow(table.currentRowCount)
+        table.insertRow(table.rowCount())
         table.newItem(0, nowTime)
         table.newItem(1, tem)
         table.newItem(2, hum)
