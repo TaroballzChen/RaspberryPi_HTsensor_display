@@ -42,7 +42,6 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication([])
     dlg = uic.loadUi("HTsensor_record.ui")
-    print(dlg.__dict__)
     DataUpdattingThread = threading.Thread(target=send_data)
     DataUpdattingThread.start()
     dlg.show()
