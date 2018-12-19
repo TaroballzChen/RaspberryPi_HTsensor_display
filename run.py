@@ -22,7 +22,7 @@ def send_data():
         nowTime = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
         min = int(datetime.datetime.now().minute)
         sec = int(datetime.datetime.now().second)
-        if min % 5 == 0 and sec >= 57:
+        if min % 5 == 4 and sec >= 57:
             currentRowCount = dlg.tableWidget.rowCount()
             dlg.tableWidget.insertRow(dlg.tableWidget.rowCount())
             dlg.tableWidget.setItem(currentRowCount, 0, QtWidgets.QTableWidgetItem(nowTime))
