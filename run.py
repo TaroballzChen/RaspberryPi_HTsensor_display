@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets,uic
+from PyQt5 import QtWidgets,uic,
 import threading,queue
 import Adafruit_DHT
 import datetime
@@ -21,10 +21,10 @@ def send_data():
         nowTime = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
         currentRowCount = dlg.tableWidget.rowCount()
         dlg.tableWidget.insertRow(dlg.tableWidget.rowCount())
-        dlg.tableWidget.setItem(currentRowCount,0, 0, nowTime)
-        dlg.tableWidget.setItem(currentRowCount,1,1, tem)
-        dlg.tableWidget.setItem(currentRowCount, 2,2, hum)
-        dlg.tableWidget.setItem(currentRowCount, 3,3, "OK")
+        dlg.tableWidget.setItem(currentRowCount, 0, QtWidgets.QTableWidgetItem(nowTime))
+        dlg.tableWidget.setItem(currentRowCount, 1, QtWidgets.QTableWidgetItem(tem))
+        dlg.tableWidget.setItem(currentRowCount, 2, QtWidgets.QTableWidgetItem(hum))
+        dlg.tableWidget.setItem(currentRowCount, 3, QtWidgets.QTableWidgetItem("OK"))
 
 
 
