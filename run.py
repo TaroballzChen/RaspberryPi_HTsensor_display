@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets,uic
 from PyQt5.QtCore import QThread,pyqtSignal
 import threading,queue
-# import Adafruit_DHT
+import Adafruit_DHT
 
 qu = queue.Queue(1)
 pin = 4
