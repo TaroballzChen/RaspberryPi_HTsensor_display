@@ -17,10 +17,10 @@
    <widget class="QLabel" name="TemperatureLabel">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>116</width>
-      <height>22</height>
+      <x>10</x>
+      <y>20</y>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -30,10 +30,10 @@
    <widget class="QLabel" name="HumidityLabel">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>150</y>
-      <width>83</width>
-      <height>22</height>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
