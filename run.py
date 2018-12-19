@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets,uic,
+from PyQt5 import QtWidgets,uic
 import threading,queue
 import Adafruit_DHT
 import datetime
