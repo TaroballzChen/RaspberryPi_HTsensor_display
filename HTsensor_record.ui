@@ -49,6 +49,9 @@
       <height>100</height>
      </rect>
     </property>
+    <property name="smallDecimalPoint">
+     <bool>false</bool>
+    </property>
     <property name="segmentStyle">
      <enum>QLCDNumber::Flat</enum>
     </property>
@@ -150,6 +153,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>tableWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

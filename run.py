@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets,uic
 from PyQt5.QtCore import QThread,pyqtSignal
 import threading,queue
-import Adafruit_DHT
+# import Adafruit_DHT
 
 qu = queue.Queue(1)
 pin = 4
@@ -11,10 +11,17 @@ def get_data():
         h, t = Adafruit_DHT.read_retry(11, pin)
         qu.put((h,t))
 
+def send_data():
+    while True:
+        data = qu.get()
+        hum = data[0]
+        tem = data[1]
+        dlg.HumidityValue.display(str(hum))
+        dlg.TemperatureValue.display(str(tem))
 
 
 
-class MyThread(QThread):
+class MyThread (QThread):
     signal = pyqtSignal(tuple)
     def __init__(self,data):
         super(MyThread, self).__init__()
@@ -36,13 +43,11 @@ if __name__ == '__main__':
     DataGettingThread = threading.Thread(target=get_data)
     DataGettingThread.start()
 
-    DataUpdattingThread = threading.Thread()
+
 
     app = QtWidgets.QApplication([])
     dlg = uic.loadUi("HTsensor_record.ui")
-
-    dlg.﻿TemperatureValue.display("34.7")
-
-
+    DataUpdattingThread = threading.Thread(target=send_data)
+    DataUpdattingThread.start()
     dlg.show()
     app.exec()
