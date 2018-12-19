@@ -21,15 +21,15 @@ def send_data():
         dlg.TemperatureValue.display(str(tem))
         nowTime = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
         min = int(datetime.datetime.now().minute)
-        if min % 5 == 0:
+        sec = int(datetime.datetime.now().second)
+        if min % 5 == 0 and sec >= 57:
             currentRowCount = dlg.tableWidget.rowCount()
             dlg.tableWidget.insertRow(dlg.tableWidget.rowCount())
             dlg.tableWidget.setItem(currentRowCount, 0, QtWidgets.QTableWidgetItem(nowTime))
             dlg.tableWidget.setItem(currentRowCount, 1, QtWidgets.QTableWidgetItem(str(tem)))
             dlg.tableWidget.setItem(currentRowCount, 2, QtWidgets.QTableWidgetItem(str(hum)))
             dlg.tableWidget.setItem(currentRowCount, 3, QtWidgets.QTableWidgetItem("OK"))
-            time.sleep(40)
-        time.sleep(20)
+
 
 
 
