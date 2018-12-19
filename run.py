@@ -22,8 +22,8 @@ def send_data():
         currentRowCount = dlg.tableWidget.rowCount()
         dlg.tableWidget.insertRow(dlg.tableWidget.rowCount())
         dlg.tableWidget.setItem(currentRowCount, 0, QtWidgets.QTableWidgetItem(nowTime))
-        dlg.tableWidget.setItem(currentRowCount, 1, QtWidgets.QTableWidgetItem(tem))
-        dlg.tableWidget.setItem(currentRowCount, 2, QtWidgets.QTableWidgetItem(hum))
+        dlg.tableWidget.setItem(currentRowCount, 1, QtWidgets.QTableWidgetItem(str(tem)))
+        dlg.tableWidget.setItem(currentRowCount, 2, QtWidgets.QTableWidgetItem(str(hum)))
         dlg.tableWidget.setItem(currentRowCount, 3, QtWidgets.QTableWidgetItem("OK"))
 
 
