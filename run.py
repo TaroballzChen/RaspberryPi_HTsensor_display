@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets,uic
 import threading,queue
 import Adafruit_DHT
 import datetime
+import time
 
 qu = queue.Queue(1)
 pin = 4
@@ -19,12 +20,16 @@ def send_data():
         dlg.HumidityValue.display(str(hum))
         dlg.TemperatureValue.display(str(tem))
         nowTime = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-        currentRowCount = dlg.tableWidget.rowCount()
-        dlg.tableWidget.insertRow(dlg.tableWidget.rowCount())
-        dlg.tableWidget.setItem(currentRowCount, 0, QtWidgets.QTableWidgetItem(nowTime))
-        dlg.tableWidget.setItem(currentRowCount, 1, QtWidgets.QTableWidgetItem(str(tem)))
-        dlg.tableWidget.setItem(currentRowCount, 2, QtWidgets.QTableWidgetItem(str(hum)))
-        dlg.tableWidget.setItem(currentRowCount, 3, QtWidgets.QTableWidgetItem("OK"))
+        min = int(datetime.datetime.now().minute)
+        if min % 5 == 0:
+            currentRowCount = dlg.tableWidget.rowCount()
+            dlg.tableWidget.insertRow(dlg.tableWidget.rowCount())
+            dlg.tableWidget.setItem(currentRowCount, 0, QtWidgets.QTableWidgetItem(nowTime))
+            dlg.tableWidget.setItem(currentRowCount, 1, QtWidgets.QTableWidgetItem(str(tem)))
+            dlg.tableWidget.setItem(currentRowCount, 2, QtWidgets.QTableWidgetItem(str(hum)))
+            dlg.tableWidget.setItem(currentRowCount, 3, QtWidgets.QTableWidgetItem("OK"))
+            time.sleep(40)
+        time.sleep(20)
 
 
 
