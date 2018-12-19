@@ -2,7 +2,6 @@ from PyQt5 import QtWidgets,uic
 import threading,queue
 import Adafruit_DHT
 import datetime
-import time
 
 qu = queue.Queue(1)
 pin = 4
@@ -29,12 +28,6 @@ def send_data():
             dlg.tableWidget.setItem(currentRowCount, 1, QtWidgets.QTableWidgetItem(str(tem)))
             dlg.tableWidget.setItem(currentRowCount, 2, QtWidgets.QTableWidgetItem(str(hum)))
             dlg.tableWidget.setItem(currentRowCount, 3, QtWidgets.QTableWidgetItem("OK"))
-
-
-
-
-
-
 
 if __name__ == '__main__':
     DataGettingThread = threading.Thread(target=get_data)
