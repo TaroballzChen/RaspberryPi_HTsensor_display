@@ -22,10 +22,10 @@ def send_data():
         table = dlg.tableWidget
         currentRowCount = table.rowCount()
         table.insertRow(table.rowCount())
-        table.setItem(currentRowCount, 0, nowTime)
-        table.setItem(currentRowCount, 1, tem)
-        table.setItem(currentRowCount, 2, hum)
-        table.setItem(currentRowCount, 3, "OK")
+        table.setItem(table,currentRowCount, 0, nowTime)
+        table.setItem(table,currentRowCount, 1, tem)
+        table.setItem(table,currentRowCount, 2, hum)
+        table.setItem(table,currentRowCount, 3, "OK")
 
 
 
