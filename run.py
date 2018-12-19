@@ -9,7 +9,7 @@ pin = 4
 def get_data():
     while True:
         h, t = Adafruit_DHT.read_retry(11, pin)
-        qu.put((h,t))
+        # qu.put((h,t))
         print((h,t))
 
 
