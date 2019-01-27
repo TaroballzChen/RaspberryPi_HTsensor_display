@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication([])
     dlg = uic.loadUi("HTsensor_record_new.ui")
-    dlg.Date.setText("%s"%datetime.datetime.now().strftime("%y/%m/%d"))
+    dlg.Date.setText("%s"%datetime.datetime.now().strftime("%Y/%m/%d"))
     dlg.Date.setFont(QFont("Arial",24,QFont.Black))
     OK_pic = QPixmap("icon/OK.png")
     Logo_pic = QPixmap("icon/logo.png")
