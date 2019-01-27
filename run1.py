@@ -11,7 +11,7 @@ pin = 4
 
 def get_data():
     while True:
-        h, t = Adafruit_DHT.read_retry(11, pin)
+        h, t = Adafruit_DHT.read_retry(22, pin)
         qu.put((h,t))
 
 def send_data():
@@ -62,6 +62,7 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication([])
     dlg = uic.loadUi("HTsensor_record_new.ui")
+    dlg.Date.setText("%s"%datetime.datetime.now().strftime("%y/%m/%d"))
     OK_pic = QPixmap("icon/OK.png")
     DataUpdattingThread = threading.Thread(target=send_data)
     DataUpdattingThread.start()
