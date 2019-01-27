@@ -11,7 +11,7 @@ pin = 4
 
 def get_data():
     while True:
-        h, t = Adafruit_DHT.read_retry(22, pin)
+        h, t = Adafruit_DHT.read_retry(22, pin,100,5)
         qu.put((h,t))
 
 def send_data():
