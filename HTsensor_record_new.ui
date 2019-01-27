@@ -117,10 +117,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="StatusLabel">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>160</y>
-      <width>59</width>
-      <height>16</height>
+      <x>390</x>
+      <y>10</y>
+      <width>400</width>
+      <height>400</height>
      </rect>
     </property>
     <property name="text">
