@@ -23,7 +23,6 @@ def send_data():
         tem = data[1]
         dlg.HumidityValue.display("%.1f"%hum)
         dlg.TemperatureValue.display("%.1f"%tem)
-        dlg.StatusLabel.setPixmap(Not_OK_pic)
         nowTime = datetime.datetime.now().strftime("%m%d-%H:%M:%S")
         min = int(datetime.datetime.now().minute)
         sec = int(datetime.datetime.now().second)
@@ -90,6 +89,7 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication([])
     dlg = uic.loadUi("HTsensor_record_new.ui")
+    dlg.MainWindow.showFullScreen()
     dlg.Date.setText("%s"%datetime.datetime.now().strftime("%Y/%m/%d"))
     dlg.Date.setFont(QFont("Arial",22,QFont.Black))
     Not_OK_pic = QPixmap("icon/NO.png")
@@ -100,5 +100,7 @@ if __name__ == '__main__':
     dlg.Logo.setScaledContents(True)
     DataUpdattingThread = threading.Thread(target=send_data)
     DataUpdattingThread.start()
+    dlg.StatusLabel.setPixmap(Not_OK_pic)
+    dlg.StatusLabel.setScaledContents(True)
     dlg.show()
     app.exec()
