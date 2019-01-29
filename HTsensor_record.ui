@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>824</width>
-    <height>461</height>
+    <width>833</width>
+    <height>446</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -151,7 +151,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="movable">
      <bool>false</bool>
@@ -166,10 +166,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="StatusLabel">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>40</y>
-        <width>271</width>
-        <height>291</height>
+        <x>90</x>
+        <y>70</y>
+        <width>231</width>
+        <height>241</height>
        </rect>
       </property>
       <property name="text">
@@ -197,7 +197,7 @@ p, li { white-space: pre-wrap; }
        </size>
       </property>
       <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOn</enum>
+       <enum>Qt::ScrollBarAsNeeded</enum>
       </property>
       <attribute name="horizontalHeaderCascadingSectionResizes">
        <bool>true</bool>
@@ -275,7 +275,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>824</width>
+     <width>833</width>
      <height>22</height>
     </rect>
    </property>
