@@ -88,8 +88,8 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication([])
     dlg = uic.loadUi("HTsensor_record.ui")
-    # dlg.showFullScreen()
-    dlg.showMaximized()
+    dlg.showFullScreen()
+    # dlg.showMaximized()
     dlg.Date.setText("%s"%datetime.datetime.now().strftime("%Y/%m/%d"))
     dlg.Date.setFont(QFont("Arial",22,QFont.Black))
     Not_OK_pic = QPixmap("icon/NO.png")
