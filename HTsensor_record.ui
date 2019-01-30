@@ -151,12 +151,9 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="movable">
-     <bool>false</bool>
-    </property>
-    <property name="tabBarAutoHide">
      <bool>false</bool>
     </property>
     <widget class="QWidget" name="tab">
