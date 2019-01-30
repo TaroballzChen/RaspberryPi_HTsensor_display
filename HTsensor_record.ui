@@ -158,6 +158,24 @@ p, li { white-space: pre-wrap; }
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
+      <string>Status</string>
+     </attribute>
+     <widget class="QLabel" name="StatusLabel">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>231</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
       <string>Table</string>
      </attribute>
      <widget class="QTableWidget" name="tableWidget">
@@ -237,24 +255,6 @@ p, li { white-space: pre-wrap; }
         </font>
        </property>
       </column>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Status</string>
-     </attribute>
-     <widget class="QLabel" name="StatusLabel">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>60</y>
-        <width>231</width>
-        <height>241</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
      </widget>
     </widget>
    </widget>
